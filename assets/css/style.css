@@ -1,0 +1,104 @@
+:root{
+  --bg:#0b1220;
+  --panel:#0f172a;
+  --panel2:#020617;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#f97316;
+  --link:#38bdf8;
+  --border: rgba(255,255,255,.10);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(249,115,22,.18), transparent 60%),
+    radial-gradient(900px 500px at 80% 0%, rgba(56,189,248,.10), transparent 55%),
+    var(--bg);
+}
+
+.wrap{ max-width:980px; margin:0 auto; padding:0 18px; }
+
+.hero{
+  padding:56px 0 28px;
+  border-bottom:1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel2), transparent);
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--muted);
+  background: rgba(255,255,255,.03);
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+h1{
+  margin:0 0 10px;
+  font-size:42px;
+  color:var(--accent);
+}
+
+.subtitle{
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.4;
+}
+
+.actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  color:var(--text);
+  text-decoration:none;
+}
+
+.btn.primary{
+  border-color: rgba(249,115,22,.35);
+  background: rgba(249,115,22,.12);
+}
+
+main{ padding:22px 0 50px; }
+
+.card{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding:18px;
+  margin:14px 0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+
+@media (max-width: 860px){
+  .grid{ grid-template-columns: 1fr; }
+  h1{ font-size:34px; }
+}
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.links{ margin:0; padding-left:18px; }
+.note{ color:var(--muted); margin:10px 0 0; }
+
+.footer{
+  border-top:1px solid var(--border);
+  padding:16px 0;
+  color:var(--muted);
+  background: rgba(2,6,23,.55);
+}
