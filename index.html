@@ -1,533 +1,449 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>FHSERVER Tech</title>
 
-  <link
-    rel="stylesheet"
-    href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-  <div class="background-grid"></div>
-  <div class="background-glow glow-1"></div>
-  <div class="background-glow glow-2"></div>
+  <div class="neural-background" aria-hidden="true">
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
 
-  <main class="page-wrapper">
+      <g class="neural-lines">
+        <path d="M100 180 C260 80, 380 80, 540 180 S820 280, 1100 180" />
+        <path d="M100 260 C260 180, 380 180, 540 260 S820 340, 1100 260" />
+        <path d="M100 340 C260 280, 380 280, 540 340 S820 400, 1100 340" />
+        <path d="M100 420 C260 500, 380 500, 540 420 S820 340, 1100 420" />
+        <path d="M100 500 C260 620, 380 620, 540 500 S820 380, 1100 500" />
 
-    <!-- HEADER -->
+        <path d="M170 180 C340 100, 440 620, 610 180 S840 620, 1030 180" />
+        <path d="M170 260 C340 140, 440 580, 610 260 S840 580, 1030 260" />
+        <path d="M170 340 C340 180, 440 540, 610 340 S840 540, 1030 340" />
+        <path d="M170 420 C340 220, 440 500, 610 420 S840 500, 1030 420" />
+        <path d="M170 500 C340 260, 440 460, 610 500 S840 460, 1030 500" />
+      </g>
 
-    <header class="site-header">
+      <g class="neural-nodes">
+        <circle cx="100" cy="180" r="8" />
+        <circle cx="100" cy="260" r="8" />
+        <circle cx="100" cy="340" r="8" />
+        <circle cx="100" cy="420" r="8" />
+        <circle cx="100" cy="500" r="8" />
 
-      <div class="header-badge">
+        <circle cx="300" cy="120" r="8" />
+        <circle cx="300" cy="240" r="8" />
+        <circle cx="300" cy="360" r="8" />
+        <circle cx="300" cy="480" r="8" />
+
+        <circle cx="550" cy="90" r="8" />
+        <circle cx="550" cy="190" r="8" />
+        <circle cx="550" cy="290" r="8" />
+        <circle cx="550" cy="390" r="8" />
+        <circle cx="550" cy="490" r="8" />
+        <circle cx="550" cy="610" r="8" />
+
+        <circle cx="780" cy="120" r="8" />
+        <circle cx="780" cy="240" r="8" />
+        <circle cx="780" cy="360" r="8" />
+        <circle cx="780" cy="480" r="8" />
+
+        <circle cx="1100" cy="180" r="8" />
+        <circle cx="1100" cy="260" r="8" />
+        <circle cx="1100" cy="340" r="8" />
+        <circle cx="1100" cy="420" r="8" />
+        <circle cx="1100" cy="500" r="8" />
+      </g>
+
+    </svg>
+
+    <span class="data-packet packet-1"></span>
+    <span class="data-packet packet-2"></span>
+    <span class="data-packet packet-3"></span>
+    <span class="data-packet packet-4"></span>
+    <span class="data-packet packet-5"></span>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+
+      <div class="badge">
         Plataforma técnica · Operación & Desarrollo
       </div>
 
       <h1>FHSERVER Tech</h1>
 
-      <p>
+      <p class="subtitle">
         Observabilidad y tecnología para sistemas críticos.
       </p>
 
-    </header>
+    </div>
+  </header>
 
-    <!-- HERO -->
+  <main class="wrap">
 
     <section class="card terminal-card">
-
       <div class="terminal-content">
 
         <div>
-
-          <h2>
-            Observabilidad,
-            datos e IA
-          </h2>
+          <h2>Observabilidad, datos e IA</h2>
 
           <p>
-            Observabilidad, integración y analítica avanzada para sistemas
-            críticos de energía e infraestructura industrial.
+            Observabilidad, integración y analítica avanzada para sistemas críticos
+            de energía e infraestructura industrial.
           </p>
-
         </div>
 
         <div class="terminal-window">
-
           <div class="terminal-bar">
-
             <span></span>
             <span></span>
             <span></span>
-
-            <p>
-              fhserver@edge-node:~/ot-analytics
-            </p>
-
+            <p>fhserver@edge-node:~/ot-analytics</p>
           </div>
 
           <div class="terminal-body">
-
-            <p>
-              <span>$</span>
-              python monitor_modbus.py
-              <b class="cursor"></b>
-            </p>
-
-            <p class="line">
-              Reading Modbus RTU registers...
-            </p>
-
-            <p class="line">
-              pymodbus.client connected:
-              192.168.100.45
-            </p>
-
-            <p class="line">
-              Voltage_L1: 229.8 V |
-              Current_L1: 18.4 A
-            </p>
-
-            <p class="line">
-              pandas dataframe generated:
-              1,024 samples
-            </p>
-
-            <p class="line">
-              AI model:
-              anomaly_score = 0.07
-            </p>
-
-            <p class="success">
-              status: system operating normally
-            </p>
-
+            <p><span>$</span> python monitor_modbus.py <b class="cursor"></b></p>
+            <p class="line">Reading Modbus RTU registers...</p>
+            <p class="line">pymodbus.client connected: 192.168.100.45</p>
+            <p class="line">Voltage_L1: 229.8 V | Current_L1: 18.4 A</p>
+            <p class="line">pandas dataframe generated: 1,024 samples</p>
+            <p class="line">AI model: anomaly_score = 0.07</p>
+            <p class="success">status: system operating normally</p>
           </div>
-
         </div>
 
       </div>
-
     </section>
-
-    <!-- ABOUT -->
 
     <section class="about-card">
+      <h2>¿Qué es fhserver.tech?</h2>
 
-      <h2>
-        ¿Qué es fhserver.tech?
-      </h2>
+        <p>
+          fhserver.tech es el espacio tecnológico y de I+D de FHSERVER SpA, orientado al desarrollo,
+          integración y validación de soluciones para infraestructura crítica, sistemas industriales
+          y entornos operacionales de alta disponibilidad.
+        </p>
 
-      <p>
-        fhserver.tech es el espacio tecnológico y de I+D de FHSERVER SpA,
-        orientado al desarrollo, integración y validación de soluciones
-        para infraestructura crítica, sistemas industriales y entornos
-        operacionales de alta disponibilidad.
-      </p>
-
-      <p>
-        Desde esta área impulsamos nuevas capacidades en monitoreo,
-        automatización, observabilidad, análisis de datos e integración OT,
-        con el objetivo de transformar información técnica en decisiones
-        operacionales más seguras, eficientes y oportunas.
-      </p>
-
+        <p>
+          Desde esta área impulsamos nuevas capacidades en monitoreo, automatización, observabilidad,
+          análisis de datos e integración OT, con el objetivo de transformar información técnica en
+          decisiones operacionales más seguras, eficientes y oportunas.
+        </p>
     </section>
+<section class="scada-mimic">
 
-    <!-- SCADA SECTION -->
+  <div class="mimic-header">
+    <div>
+      <h2>Supervisión Energética y Operacional</h2>
+      <p>Supervisión operacional en tiempo real para infraestructura crítica,
+         energía y sistemas industriales de alta disponibilidad.</p>
+    </div>
 
-    <section class="scada-section">
+    <span class="mimic-status">
+      <span></span>
+      Online
+    </span>
+  </div>
 
-      <div class="scada-header">
+  <div class="mimic-stage">
 
-        <div>
+    <div class="bypass-line"></div>
 
-          <h2>
-            Supervisión Energética Operacional
-          </h2>
+    <div class="mimic-block bypass">
+      <span>↯</span>
+      <strong>Bypass</strong>
+    </div>
 
-          <p>
-            Ingeniería visual aplicada al monitoreo operacional de
-            infraestructura energética y sistemas industriales de
-            disponibilidad crítica.
-          </p>
+    <div class="energy-line main-line"></div>
 
+<div class="mimic-block input">
+  <span>⚡</span>
+  <strong>Entrada AC</strong>
+
+  <small>
+    <b class="ok">Vin L1-L2:</b> 397.0 V<br>
+    <b class="ok">Vin L2-L3:</b> 398.0 V<br>
+    <b class="ok">Vin L3-L1:</b> 396.0 V<br>
+    <b class="ok">Iin Avg:</b> 118.0 A<br>
+    <b class="ok">Fin:</b> 50.0 Hz
+  </small>
+</div>
+
+<div class="mimic-block rectifier">
+  <span>↻</span>
+  <strong>Rectificador</strong>
+
+  <small>
+    <b class="online">Input OK:</b> YES<br>
+    <b class="ok">Vin AVG:</b> 397.0 V<br>
+    <b class="ok">Efficiency:</b> 98.2 %<br>
+    <b class="ok">Status:</b> Running
+  </small>
+</div>
+
+    <div class="mimic-node">
+      <span></span>
+    </div>
+
+<div class="mimic-block inverter">
+  <span>↻</span>
+  <strong>Inversor</strong>
+
+  <small>
+    <b class="ok">Vout L1-L2:</b> 400.0 V<br>
+    <b class="ok">Vout L2-L3:</b> 401.0 V<br>
+    <b class="ok">Vout L3-L1:</b> 400.0 V<br>
+    <b class="ok">Iout Avg:</b> 108.0 A<br>
+    <b class="ok">Fout:</b> 50.0 Hz
+  </small>
+</div>
+
+<div class="mimic-block load">
+  <span>▣</span>
+  <strong>Carga</strong>
+
+  <small>
+    <b class="ok">Load:</b> 50.0 %<br>
+    <b class="ok">kW:</b> 75.0<br>
+    <b class="ok">kVA:</b> 75.0<br>
+    <b class="ok">PF:</b> 1.0<br>
+    <b class="online">Status:</b> Online
+  </small>
+</div>
+
+    <div class="battery-line"></div>
+
+<div class="mimic-block battery">
+  <span>▰</span>
+  <strong>Banco de Baterías</strong>
+
+  <small>
+    <b class="ok">Vbat:</b> 600.0 Vdc<br>
+    <b class="ok">Ibat:</b> -100.0 A<br>
+    <b class="online">SOC:</b> 100.0 %<br>
+    <b class="ok">Runtime:</b> 29.0 min
+  </small>
+</div>
+
+  </div>
+
+</section>
+
+    <section class="grid">
+
+      <div class="card feature-card">
+        <div class="feature-title">
+          <span class="feature-icon">◉</span>
+          <h3>Monitoreo</h3>
         </div>
 
-        <div class="status-online">
-
-          <span></span>
-          Online
-
-        </div>
-
+        <p>
+          Observabilidad y supervisión de infraestructura crítica OT y sistemas industriales.
+        </p>
       </div>
 
-      <!-- MIMICO -->
-
-      <div class="scada-mimic">
-
-        <div class="mimic-line horizontal"></div>
-        <div class="mimic-line vertical"></div>
-
-        <div class="mimic-node center"></div>
-
-        <div class="mimic-box ac">
-
-          <h3>⚡ Entrada AC</h3>
-
-          <p>Vin L1-L2: 397.0 V</p>
-          <p>Vin L2-L3: 398.0 V</p>
-          <p>Vin L3-L1: 396.0 V</p>
-          <p>Iin Avg: 118.0 A</p>
-          <p>Fin: 50.0 Hz</p>
-
+      <div class="card feature-card">
+        <div class="feature-title">
+          <span class="feature-icon">⬢</span>
+          <h3>Desarrollo</h3>
         </div>
 
-        <div class="mimic-box rectifier">
+        <p>
+          Integraciones, automatización, APIs, analítica de datos y desarrollo de soluciones operacionales.
+        </p>
+      </div>
 
-          <h3>↻ Rectificador</h3>
-
-          <p>Input OK: YES</p>
-          <p>Vin AVG: 397.0 V</p>
-          <p>Efficiency: 98.2 %</p>
-          <p>Status: Running</p>
-
+      <div class="card feature-card">
+        <div class="feature-title">
+          <span class="feature-icon">◈</span>
+          <h3>OT y Sistemas Industriales</h3>
         </div>
 
-        <div class="mimic-box inverter">
-
-          <h3>↻ Inversor</h3>
-
-          <p>Vout L1-L2: 400.0 V</p>
-          <p>Vout L2-L3: 401.0 V</p>
-          <p>Vout L3-L1: 400.0 V</p>
-          <p>Iout Avg: 108.0 A</p>
-          <p>Fout: 50.0 Hz</p>
-
-        </div>
-
-        <div class="mimic-box load">
-
-          <h3>▣ Carga</h3>
-
-          <p>Load: 50.0 %</p>
-          <p>kW: 75.0</p>
-          <p>kVA: 75.0</p>
-          <p>PF: 1.0</p>
-          <p>Status: Online</p>
-
-        </div>
-
-        <div class="mimic-box bypass">
-
-          <h3>↯ Bypass</h3>
-
-        </div>
-
-        <div class="mimic-box battery">
-
-          <h3>▰ Banco de Baterías</h3>
-
-          <p>Vbat: 600.0 Vdc</p>
-          <p>Ibat: -100.0 A</p>
-          <p>SOC: 100.0 %</p>
-
-        </div>
-
+        <p>
+          Integración de protocolos industriales, SCADA, edge computing y supervisión de infraestructura operacional crítica.
+        </p>
       </div>
 
     </section>
 
-    <!-- FEATURES -->
-
-    <section class="features-grid">
-
-      <article class="feature-card">
-
-        <h3>📊 Monitoreo</h3>
-
-        <p>
-          Observabilidad y supervisión operacional para OT y
-          sistemas industriales.
-        </p>
-
-      </article>
-
-      <article class="feature-card">
-
-        <h3>🧠 Desarrollo</h3>
-
-        <p>
-          Integraciones industriales, APIs, análisis de datos y
-          automatización operacional.
-        </p>
-
-      </article>
-
-      <article class="feature-card">
-
-        <h3>🏭 OT y Sistemas Industriales</h3>
-
-        <p>
-          Integración de protocolos industriales, telemetría y
-          supervisión OT/IT.
-        </p>
-
-      </article>
-
-    </section>
-
-    <!-- PLATFORMS -->
-
-    <section class="platforms-section">
-
+    <section class="card">
       <h2>Plataformas</h2>
 
       <div class="platform-grid">
 
-        <div class="platform-card">
-
-          <h3>PRTG Network Monitor</h3>
-
-          <p>
-            Monitoreo OT/IT, infraestructura crítica,
-            telemetría y alertamiento.
-          </p>
-
-        </div>
-
-        <div class="platform-card">
-
-          <h3>Ignition SCADA</h3>
+        <a class="platform-card" href="https://prtg.fhserver.tech" target="_blank" rel="noopener">
+          <div class="platform-title">
+            <span class="platform-icon">◉</span>
+            <h3>PRTG Network Monitor</h3>
+          </div>
 
           <p>
-            Supervisión industrial, OPC-UA,
-            historian y sistemas SCADA.
+            Monitoreo IT/OT, sensores, alarmas y observabilidad.
           </p>
+        </a>
 
-        </div>
-
-        <div class="platform-card">
-
-          <h3>Grafana</h3>
+        <a class="platform-card" href="https://ignition.fhserver.tech" target="_blank" rel="noopener">
+          <div class="platform-title">
+            <span class="platform-icon">⬢</span>
+            <h3>Ignition SCADA</h3>
+          </div>
 
           <p>
-            Visualización de métricas,
-            telemetría y analítica.
+            Supervisión industrial, OPC UA y dashboards SCADA.
           </p>
+        </a>
 
-        </div>
-
-        <div class="platform-card">
-
-          <h3>Pandora FMS</h3>
+        <a class="platform-card" href="https://grafana.fhserver.tech" target="_blank" rel="noopener">
+          <div class="platform-title">
+            <span class="platform-icon">◎</span>
+            <h3>Grafana</h3>
+          </div>
 
           <p>
-            Monitoreo de infraestructura
-            y sistemas críticos.
+            Visualización de métricas, históricos y analytics.
           </p>
+        </a>
 
-        </div>
+        <a class="platform-card" href="https://pandora.fhserver.tech/pandora_console/" target="_blank" rel="noopener">
+          <div class="platform-title">
+            <span class="platform-icon">◈</span>
+            <h3>Pandora FMS</h3>
+          </div>
 
+          <p>
+            Monitoreo de infraestructura y servicios críticos.
+          </p>
+        </a>
+
+      </div>
+
+      <div class="access-note">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="22"
+             height="22"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <path d="M9 12l2 2 4-4"></path>
+
+        </svg>
+
+        <span>Acceso protegido mediante Cloudflare Access.</span>
       </div>
 
     </section>
 
-    <!-- CONTACT -->
+  <section class="contact-section">
+  <div class="contact-copy">
+    <h2>Conversemos tu proyecto</h2>
+    <p>
+      Cuéntanos tus requerimientos de monitoreo, automatización, observabilidad
+      o integración OT. Nuestro equipo evaluará una solución técnica para tu operación.
+    </p>
+  </div>
 
-    <section class="contact-section">
+  <form class="contact-form" action="/contact" method="POST">
+    <input type="text" name="empresa" placeholder="Empresa / Organización" required>
+    <input type="text" name="nombre" placeholder="Nombre y cargo" required>
+    <input type="email" name="email" placeholder="Correo corporativo" required>
 
-      <div class="contact-copy">
+    <select name="tipo_proyecto" required>
+      <option value="">Tipo de proyecto</option>
+      <option>Monitoreo OT</option>
+      <option>SCADA</option>
+      <option>Infraestructura crítica</option>
+      <option>UPS & Energía</option>
+      <option>Observabilidad</option>
+      <option>Cyber Seguridad Industrial</option>
+      <option>Integración Industrial</option>
+      <option>Otro</option>
+    </select>
 
-        <h2>
-          Conversemos tu proyecto
-        </h2>
+    <textarea name="mensaje" rows="5" placeholder="Describe brevemente tu requerimiento" required></textarea>
 
-        <p>
-          Cuéntanos tus requerimientos de monitoreo,
-          automatización, observabilidad o integración OT.
-          Nuestro equipo evaluará una solución técnica
-          para tu operación.
-        </p>
-
-      </div>
-
-      <form
-        class="contact-form"
-        action="/contact"
-        method="POST">
-
-        <input
-          type="text"
-          name="empresa"
-          placeholder="Empresa / Organización"
-          required>
-
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre y cargo"
-          required>
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Correo corporativo"
-          required>
-
-        <select
-          name="tipo_proyecto"
-          required>
-
-          <option value="">
-            Tipo de proyecto
-          </option>
-
-          <option>
-            Monitoreo OT
-          </option>
-
-          <option>
-            SCADA
-          </option>
-
-          <option>
-            Infraestructura crítica
-          </option>
-
-          <option>
-            UPS & Energía
-          </option>
-
-          <option>
-            Observabilidad
-          </option>
-
-          <option>
-            Cyber Seguridad Industrial
-          </option>
-
-          <option>
-            Integración Industrial
-          </option>
-
-          <option>
-            Otro
-          </option>
-
-        </select>
-
-        <textarea
-          name="mensaje"
-          rows="5"
-          placeholder="Describe brevemente tu requerimiento"
-          required>
-        </textarea>
-
-        <div
-          class="cf-turnstile"
-          data-sitekey="0x4AAAAAAADXZgeqObzST2K28">
-        </div>
-
-        <button type="submit">
-          Solicitar evaluación técnica
-        </button>
-
-      </form>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <h3>FHSERVER Tech</h3>
-
-          <p>
-            Plataforma técnica para monitoreo,
-            observabilidad e integración de infraestructura
-            crítica y energética.
-          </p>
-
-          <p>
-            © 2026 FHSERVER SpA
-          </p>
-
-        </div>
-
-        <div>
-
-          <h4>Plataformas</h4>
-
-          <ul>
-
-            <li>PRTG</li>
-            <li>Ignition SCADA</li>
-            <li>Grafana</li>
-            <li>Pandora FMS</li>
-
-          </ul>
-
-        </div>
-
-        <div>
-
-          <h4>Especialidades</h4>
-
-          <ul>
-
-            <li>Observabilidad OT</li>
-            <li>SCADA & Automatización</li>
-            <li>Infraestructura Crítica</li>
-            <li>Edge Computing</li>
-            <li>Cyber Seguridad Industrial</li>
-
-          </ul>
-
-        </div>
-
-        <div>
-
-          <h4>Contacto</h4>
-
-          <ul>
-
-            <li>www.fhserver.tech</li>
-            <li>contacto@fhserver.cl</li>
-            <li>Av. Simón Bolívar 2235 · Ñuñoa</li>
-            <li>Santiago · Chile</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </footer>
+    <button type="submit">Solicitar evaluación técnica</button>
+  </form>
+</section>
 
   </main>
 
-  <script
-    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-    async
-    defer>
-  </script>
+  <footer class="footer">
+
+    <div class="wrap footer-grid">
+
+      <div class="footer-brand">
+        <h3>FHSERVER Tech</h3>
+
+        <p>
+          Plataforma técnica para monitoreo, observabilidad e integración
+          de infraestructura crítica industrial y energética.
+        </p>
+
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span>Acceso seguro mediante Cloudflare Zero Trust</span>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Plataformas</h4>
+
+        <a href="https://prtg.fhserver.tech" target="_blank">PRTG</a>
+        <a href="https://ignition.fhserver.tech" target="_blank">Ignition SCADA</a>
+        <a href="https://grafana.fhserver.tech" target="_blank">Grafana</a>
+        <a href="https://pandora.fhserver.tech/pandora_console/" target="_blank">Pandora FMS</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Especialidades</h4>
+
+        <span>Observabilidad OT</span>
+        <span>SCADA & Automatización</span>
+        <span>Infraestructura Crítica</span>
+        <span>Edge Computing</span>
+        <span>Cyber Seguridad Industrial</span>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contacto</h4>
+
+        <a href="https://fhserver.cl" target="_blank">www.fhserver.cl</a>
+        <a href="mailto:contacto@fhserver.cl">contacto@fhserver.cl</a>
+
+        <span>
+          Av. Simón Bolívar 2235 · Ñuñoa<br>
+          Santiago, Chile
+        </span>
+
+        <div class="footer-protected">
+          Protected by Cloudflare Zero Trust
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrap footer-bottom-content">
+        <span>© 2026 FHSERVER SpA · Todos los derechos reservados.</span>
+        <span>FHSERVER Tech · Plataforma OT & Observability</span>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
-
 </html>
