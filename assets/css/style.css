@@ -187,14 +187,15 @@ body{
 .hero .wrap{
   position:relative;
   z-index:2;
+  text-align:left;
 }
 
 .hero-logo{
-  display:block;
-  max-width:460px;
-  width:100%;
-  height:auto;
-  margin:20px 0;
+    display:block;
+    max-width:430px;
+    height:auto;
+
+    margin:12px 0 12px 0;
 }
 
 .badge{
