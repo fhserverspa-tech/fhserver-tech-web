@@ -191,15 +191,11 @@ body{
 }
 
 .hero-logo{
-  display:block;
-
-  width:320px;
+  width:480px;
   max-width:100%;
   height:auto;
 
-  margin:10px 0 14px 0;
-
-  object-fit:contain;
+  margin:0 0 16px 0;
 }
 
 .badge{
