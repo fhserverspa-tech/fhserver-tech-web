@@ -189,6 +189,14 @@ body{
   z-index:2;
 }
 
+.hero-logo{
+  display:block;
+  max-width:460px;
+  width:100%;
+  height:auto;
+  margin:20px 0;
+}
+
 .badge{
   display:inline-block;
   padding:6px 10px;
